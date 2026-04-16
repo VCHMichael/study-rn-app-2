@@ -1,4 +1,5 @@
 import { Dimensions, StyleSheet } from 'react-native';
+import { SIZE } from '../../constants/style.ts';
 
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = width * 0.8
@@ -7,8 +8,8 @@ export const styles = StyleSheet.create({
   container: {
     width: CARD_WIDTH,
     flexDirection: 'row',
-    padding: 12,
-    borderRadius: 8,
+    padding: SIZE.xxl,
+    borderRadius: SIZE.l,
     borderWidth: 1,
     borderColor: 'grey',
     alignItems: 'center',
