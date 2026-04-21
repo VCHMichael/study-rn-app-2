@@ -1,19 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import {
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-  ScrollView,
-} from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { ProductCard } from './src/components';
-import { PRODUCTS_DATA } from './src/store/products.ts';
+import { StatusBar, useColorScheme } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { AppNavigator } from './src/navigation/AppNavigator.tsx';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -21,40 +8,9 @@ function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
+      <AppNavigator />
     </SafeAreaProvider>
   );
 }
-
-function AppContent() {
-  return (
-    <SafeAreaView style={styles.safeArea}>
-      <ScrollView
-        contentContainerStyle={styles.container}
-      >
-        {PRODUCTS_DATA.map(card => (
-          <ProductCard
-            key={card.id}
-            title={card.title}
-            price={card.price}
-            imageUrl={card.imageUrl}
-          />
-        ))}
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 12,
-  },
-  safeArea: {
-    flex: 1,
-  }
-});
 
 export default App;
