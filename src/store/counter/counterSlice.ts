@@ -1,8 +1,10 @@
 import { CounterState } from './types.ts';
 import { createSlice } from '@reduxjs/toolkit';
 
+const INITIAL_STATE_VALUE = 0;
+
 const initialState: CounterState = {
-  value: 0,
+  value: INITIAL_STATE_VALUE,
 };
 
 const counterSlice = createSlice({
