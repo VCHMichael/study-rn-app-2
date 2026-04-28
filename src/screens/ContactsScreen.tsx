@@ -1,32 +1,21 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ActivityIndicator,
-  FlatList,
-} from 'react-native';
-import { usePhotos } from '../hooks/usePhotos.ts';
+import { View, Text, StyleSheet } from 'react-native';
+import { useTheme } from '../context/themeContext/useTheme';
+import { CustomButton } from '../components';
 
 export const ContactsScreen = () => {
-  const { photos, loading, error } = usePhotos();
+  const { theme, toggleTheme } = useTheme();
 
-  if (loading) {
-    return <ActivityIndicator size="large" />;
-  }
+  const containerStyle =
+    theme === 'light' ? styles.lightContainer : styles.darkContainer;
 
-  if (error) {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.title}>{error}</Text>
-      </View>
-    );
-  }
+  const textStyle = theme === 'light' ? styles.textLight : styles.textDark;
+
   return (
-    <FlatList
-      data={photos}
-      renderItem={({ item }) => <Text>{item.title}</Text>}
-    />
+    <View style={[styles.container, containerStyle]}>
+      <Text style={textStyle}>Current: {theme}</Text>
+      <CustomButton title={'Змінити тему'} onPress={toggleTheme} />
+    </View>
   );
 };
 
@@ -37,8 +26,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
   },
-  title: {
-    fontSize: 24,
-    fontWeight: '600',
+  darkContainer: {
+    backgroundColor: 'black',
+
+    //backgroundColor: theme.container.backgroundColor
+  },
+  lightContainer: {
+    backgroundColor: 'white',
+  },
+  textDark: {
+    color: 'white',
+  },
+  textLight: {
+    color: 'black',
   },
 });

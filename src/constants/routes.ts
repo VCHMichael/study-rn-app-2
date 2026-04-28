@@ -2,9 +2,12 @@ export const ROUTES = {
   HomeScreen: 'HomeScreen',
   ContactsScreen: 'ContactsScreen',
   ProfileScreen: 'ProfileScreen',
+  EditProfileScreen: 'EditProfileScreen',
   ProductDetailsScreen: 'ProductDetailsScreen',
   ProductsScreen: 'ProductsScreen',
   DrawerNavigator: 'DrawerNavigator',
   MainTabs: 'MainTabs',
   ProductsStack: 'ProductsStack',
+  ProfileStack: 'ProfileStack',
+  ReduxCounterScreen: 'ReduxCounterScreen',
 } as const;

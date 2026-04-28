@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, ScrollView } from 'react-native';
 import { ProductCard } from '../components';
-import { PRODUCTS_DATA } from '../store/products.ts';
+import { PRODUCTS_DATA } from '../mock/products.ts';
 import { useNavigation } from '@react-navigation/core';
 import { ROUTES } from '../constants/routes.ts';
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';

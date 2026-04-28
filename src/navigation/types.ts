@@ -8,13 +8,19 @@ export type ProductsStackParamList = {
   };
 };
 
+export type ProfileStackParamList = {
+  ProfileScreen: undefined; // screen
+  EditProfileScreen: undefined; // screen
+};
+
 export type MainTabParamList = {
   HomeScreen: undefined; // screen
   ProductsStack: NavigatorScreenParams<ProductsStackParamList>; // stack
-  ProfileScreen: undefined; // screen
+  ProfileStack: NavigatorScreenParams<ProfileStackParamList>; // stack
 };
 
 export type RootDrawerParamList = {
   MainTabs: NavigatorScreenParams<MainTabParamList>; // tabs
   ContactsScreen: undefined; // screen
+  ReduxCounterScreen: undefined
 };

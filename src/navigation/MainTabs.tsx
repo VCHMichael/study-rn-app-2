@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreen } from '../screens/HomeScreen';
-import { ProfileScreen } from '../screens/ProfileScreen';
+import { ProfileStack } from './ProfileStack';
 import { ProductsStack } from './ProductsStack';
 import { MainTabParamList } from './types';
 import { ROUTES } from '../constants/routes.ts';
@@ -39,7 +39,7 @@ export const MainTabs = () => {
             iconName = 'bag';
           }
 
-          if (route.name === ROUTES.ProfileScreen) {
+          if (route.name === ROUTES.ProfileStack) {
             iconName = 'person';
           }
 
@@ -62,8 +62,8 @@ export const MainTabs = () => {
         }}
       />
       <Tab.Screen
-        name={ROUTES.ProfileScreen}
-        component={ProfileScreen}
+        name={ROUTES.ProfileStack}
+        component={ProfileStack}
         options={{ title: 'Профайл' }}
       />
     </Tab.Navigator>

@@ -5,6 +5,7 @@ import { MainTabs } from './MainTabs';
 import { ContactsScreen } from '../screens/ContactsScreen';
 import { RootDrawerParamList } from './types';
 import { ROUTES } from '../constants/routes.ts';
+import { ReduxCounterScreen } from '../screens/ReduxCounterScreen.tsx';
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
@@ -32,6 +33,13 @@ export const AppNavigator = () => {
           component={ContactsScreen}
           options={{
             title: 'Контакти',
+          }}
+        />
+        <Drawer.Screen
+          name={ROUTES.ReduxCounterScreen}
+          component={ReduxCounterScreen}
+          options={{
+            title: 'Counter',
           }}
         />
       </Drawer.Navigator>
