@@ -10,4 +10,7 @@ export const ROUTES = {
   ProductsStack: 'ProductsStack',
   ProfileStack: 'ProfileStack',
   ReduxCounterScreen: 'ReduxCounterScreen',
+  CameraScreen: 'CameraScreen',
+  LocationScreen: 'LocationScreen',
+  SensorScreen: 'SensorScreen',
 } as const;

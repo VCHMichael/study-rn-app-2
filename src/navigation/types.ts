@@ -22,5 +22,8 @@ export type MainTabParamList = {
 export type RootDrawerParamList = {
   MainTabs: NavigatorScreenParams<MainTabParamList>; // tabs
   ContactsScreen: undefined; // screen
-  ReduxCounterScreen: undefined
+  ReduxCounterScreen: undefined;
+  CameraScreen: undefined;
+  LocationScreen: undefined;
+  SensorScreen: undefined;
 };
