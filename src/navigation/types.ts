@@ -1,4 +1,5 @@
 import type { NavigatorScreenParams } from '@react-navigation/native';
+import { MemoListScreen } from '../screens/MemoListItem.tsx';
 
 export type ProductsStackParamList = {
   ProductsScreen: undefined; // screen
@@ -26,4 +27,7 @@ export type RootDrawerParamList = {
   CameraScreen: undefined;
   LocationScreen: undefined;
   SensorScreen: undefined;
+  LayoutAnimatedListScreen: undefined
+  ReanimatedScreen: undefined
+  MemoListScreen: undefined
 };

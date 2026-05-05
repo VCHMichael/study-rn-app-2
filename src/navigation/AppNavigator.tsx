@@ -9,6 +9,9 @@ import { ReduxCounterScreen } from '../screens/ReduxCounterScreen.tsx';
 import { CameraScreen } from '../screens/CameraScreen.tsx';
 import { LocationScreen } from '../screens/LocationScreen.tsx';
 import { SensorScreen } from '../screens/SensorScreen.tsx';
+import { LayoutAnimatedListScreen } from '../screens/LayoutAnimatedListScreen.tsx';
+import { ReanimatedScreen } from '../screens/ReanimatedScreen.tsx';
+import { MemoListScreen } from '../screens/MemoListItem.tsx';
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
@@ -58,11 +61,35 @@ export const AppNavigator = () => {
             title: 'Location',
           }}
         />
+
         <Drawer.Screen
           name={ROUTES.SensorScreen}
           component={SensorScreen}
           options={{
             title: 'SensorScreen',
+          }}
+        />
+
+        <Drawer.Screen
+          name={ROUTES.LayoutAnimatedListScreen}
+          component={LayoutAnimatedListScreen}
+          options={{
+            title: 'LayoutAnimatedListScreen',
+          }}
+        />
+
+        <Drawer.Screen
+          name={ROUTES.ReanimatedScreen}
+          component={ReanimatedScreen}
+          options={{
+            title: 'ReanimatedScreen',
+          }}
+        />
+        <Drawer.Screen
+          name={ROUTES.MemoListScreen}
+          component={MemoListScreen}
+          options={{
+            title: 'MemoListScreen',
           }}
         />
       </Drawer.Navigator>

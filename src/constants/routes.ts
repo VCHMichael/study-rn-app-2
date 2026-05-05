@@ -1,3 +1,5 @@
+import { MemoListScreen } from '../screens/MemoListItem.tsx';
+
 export const ROUTES = {
   HomeScreen: 'HomeScreen',
   ContactsScreen: 'ContactsScreen',
@@ -13,4 +15,7 @@ export const ROUTES = {
   CameraScreen: 'CameraScreen',
   LocationScreen: 'LocationScreen',
   SensorScreen: 'SensorScreen',
+  LayoutAnimatedListScreen: 'LayoutAnimatedListScreen',
+  ReanimatedScreen: 'ReanimatedScreen',
+  MemoListScreen: 'MemoListScreen'
 } as const;
